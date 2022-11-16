@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="FlightSeller.RegistrationPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="600" Height="500" IsVisibleChanged="registrationPageIsVisibleChanged">
+    <Border  CornerRadius="20">
+        <Grid x:Name="RegistrationGrid" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="34"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Images/welcome.png" Grid.Column="2" Margin="45.6,-10,58,0.2"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,4,99.4,3.2" Grid.Row="1"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.8,92.4,3.4" Grid.Row="2"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.6,31.4,3.6" Grid.Row="3"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,4.4,102.4,2.8" Grid.Row="4"/>
+            <Border Background="#6162F5"  Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,4,80.4,3.2" Grid.Row="5"></Border>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,4,14.4,3.2" Grid.Row="6"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.8,58.4,3.4" Grid.Row="7"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.6,102.4,3.6" Grid.Row="8"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.4,84.4,3.8" Grid.Row="9"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.6,31.4,3.6" Grid.Row="11"/>
+            <Border Background="#6162F5" Height="20" Grid.ColumnSpan="2" CornerRadius="12" Margin="101,3.4,49.4,3.8" Grid.Row="12"/>
+
+            <Label Content="email: " Foreground="White" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top"/>
+            <Label Content="Пароль: " Foreground="White" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top"/>
+            <Label Content="Повторите пароль: " Foreground="White" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top"/>
+            <Label Content="Имя: " Foreground="White" Grid.Column="1" Grid.Row="4" VerticalAlignment="Top"/>
+            <Label Content="Фамилия: " Foreground="White" Grid.Column="1" Grid.Row="5" VerticalAlignment="Top"/>
+            <Label Content="Ваша дата рождения: " Foreground="White" Grid.Column="1" Grid.Row="6" VerticalAlignment="Top"/>
+            <Label Content="Гражданство: " Foreground="White" Grid.Column="1" Grid.Row="7" VerticalAlignment="Top"/>
+            <Label Content="Пол: " Foreground="White" Grid.Column="1" Grid.Row="8" VerticalAlignment="Top"/>
+            <Label Content="Телефон: " Foreground="White" Grid.Column="1" Grid.Row="9" VerticalAlignment="Top"/>
+            <Label Content="Паспорт" Foreground="White" Grid.Column="1" Grid.Row="10" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+            <Label Content="Номер паспорта: " Foreground="White" Grid.Column="1" Grid.Row="11" VerticalAlignment="Top"/>
+            <Label Content="Срок действия: " Foreground="White" Grid.Column="1" Grid.Row="12" VerticalAlignment="Top"/>
+
+            <TextBox x:Name="emailField" Grid.Column="2" Margin="0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <PasswordBox x:Name="passwordField" Grid.Column="2" Margin="0" Grid.Row="2"  VerticalAlignment="Bottom"/>
+            <PasswordBox x:Name="repeatPassportField" Grid.Column="2" Margin="0" Grid.Row="3"  VerticalAlignment="Bottom"/>
+            <TextBox x:Name="nameField" Grid.Column="2" Margin="0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="surnameField" Grid.Column="2" Margin="0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <DatePicker x:Name="birthDatePicker" Grid.Column="2" Margin="0" Grid.Row="6" VerticalAlignment="Bottom" Background="{x:Null}"/>
+            <TextBox x:Name="citizenField" Grid.Column="2" Margin="0" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+
+            <TextBox x:Name="phoneField" Grid.Column="2" Margin="0" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="passportNoField" Grid.Column="2" Margin="0" Grid.Row="11" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <DatePicker x:Name="validityDatePicker" Grid.Column="2" Margin="0" Grid.Row="12" VerticalAlignment="Bottom" Background="{x:Null}"/>
+            <RadioButton x:Name="femaleCheckBox" Foreground="White" Content="Ж" Grid.Column="2" HorizontalAlignment="Left" Margin="59.6,4.6,0,6.6" Grid.Row="8"/>
+            <RadioButton x:Name="maleCheckBox" Foreground="White" Content="М" Grid.Column="2" HorizontalAlignment="Left" Margin="22,5,0,0" Grid.Row="8" VerticalAlignment="Top" IsChecked="True"/>
+            <Button Content="Зарегистрироваться" Background="#6162F5" Style="{StaticResource CornerButton}" Foreground="White"  Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="13" VerticalAlignment="Bottom" Width="150" Grid.ColumnSpan="2" Height="25" Click="RegistrationButtonClick"/>
+            <Label x:Name="goBackLabel" Content="&lt;&lt; Назад" HorizontalAlignment="Left" Margin="10,29,0,0" Grid.Row="14" VerticalAlignment="Top" FontSize="18"  Cursor="Hand"  FontStyle="Normal"  Foreground="White" MouseLeftButtonDown="goBackLabelMouseLeftButtonDown" />
+
+
+        </Grid>
+    </Border>
+</UserControl>

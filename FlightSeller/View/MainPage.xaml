@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="FlightSeller.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000" IsVisibleChanged="mainPageIsVisibleChanged">
+    <Grid x:Name="MainGrid" Visibility="Visible">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="217*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="256*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Найти!"  Background="#6162F5" Style="{StaticResource CornerButton}" Foreground="White"  Grid.Column="5" Grid.Row="2" VerticalAlignment="Bottom" Height="30" Cursor="Hand" Click="MainGoButtonClick" VerticalContentAlignment="Center" Margin="0,0,0,6">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FF6D7DF1" Offset="0.011"/>
+                    <GradientStop Color="#FF0D549B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <TextBox x:Name="mainCityFrom" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="Москва" Margin="5,0,5,6" VerticalAlignment="Bottom" Height="30" GotFocus="TextBoxGotFocus" VerticalContentAlignment="Center" >
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FF6D7DF1" Offset="0.011"/>
+                    <GradientStop Color="#FF0D549B" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="mainCityTo" Grid.Column="2" TextWrapping="Wrap" Text="Самара" Grid.Row="2" Margin="5,0,5,6" VerticalAlignment="Bottom" Height="30" GotFocus="TextBoxGotFocus" VerticalContentAlignment="Center">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FF6D7DF1" Offset="0.011"/>
+                    <GradientStop Color="#FF0D549B" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <DatePicker x:Name="mainDatePickerFrom" Grid.Column="3" Grid.Row="2" VerticalAlignment="Bottom" Height="30" Margin="5,0,5,6" FirstDayOfWeek="Monday" SelectedDate="{x:Static sys:DateTime.Now}" SelectedDateChanged="mainDatePickerFromSelectedDateChanged" FontSize="16" VerticalContentAlignment="Center" >
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FF6D7DF1" Offset="0.011"/>
+                    <GradientStop Color="#FF0D549B" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+        </DatePicker>
+        <DatePicker x:Name="mainDatePickerTo" Grid.Column="4" Grid.Row="2" Margin="5,0,5,6" FirstDayOfWeek="Monday" SelectedDate="{x:Static sys:DateTime.Now}" FontSize="16" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Bottom" >
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FF6D7DF1" Offset="0.011"/>
+                    <GradientStop Color="#FF0D549B" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+        </DatePicker>
+        <CheckBox x:Name="mainIsBothWays" Foreground="White" Content="Туда-Обратно" Grid.Column="4" HorizontalAlignment="Left" Margin="34,1,0,0" Grid.Row="3" VerticalAlignment="Top" Height="16" Width="122" IsChecked="True" Checked="mainIsBothWaysChecked" Unchecked="mainIsBothWaysUnchecked"/>
+        <CheckBox x:Name="mainIsBusiness" Foreground="White" Content="Бизнес клаcс" Grid.Column="4" HorizontalAlignment="Left" Margin="34,21,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.382,-1.429" Height="16" Width="122"/>
+        <Label Content="Откуда:" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="5,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162"/>
+        <Label Content="Куда:" Foreground="White" Grid.Column="2" Margin="5,20,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Left" Width="162"/>
+        <Label Content="Дата туда:" Foreground="White" Grid.Column="3" HorizontalAlignment="Left" Margin="5,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="163" Grid.RowSpan="2"/>
+        <Label Content="Дата обратно:" Foreground="White" Grid.Column="4" HorizontalAlignment="Left" Margin="5,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162" Grid.RowSpan="2"/>
+        <Image Source="/Images/plane_1.png" Width="200" Grid.ColumnSpan="7" Grid.RowSpan="4"></Image>    
+    
+    </Grid>
+</UserControl>

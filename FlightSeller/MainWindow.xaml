@@ -1,0 +1,35 @@
+﻿<Window
+        x:Class="FlightSeller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="clr-namespace:FlightSeller"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Name="mainWindow"
+        Title="FlightSeller" Height="600" Width="1000" Loaded="mainWindowLoaded">
+    <Border  Background="#272537" CornerRadius="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Image Source="/Images/paper_plane.png" Grid.RowSpan="2" Height="500" Margin="160,0,0,0"></Image>
+            <Image Source="/Images/paper_plane_2.png" Grid.RowSpan="2" Height="500" Margin="0,0,160,0"></Image>
+
+            <Custom:MainPage x:Name="mainPage" Visibility="Hidden" Grid.RowSpan="2"></Custom:MainPage>
+            <Custom:SearchPage x:Name="searchPage" Visibility="Hidden" Grid.RowSpan="2"></Custom:SearchPage>
+            <Custom:RegistrationPage x:Name="registrationPage" Visibility="Hidden" Grid.RowSpan="2" HorizontalAlignment="Center"></Custom:RegistrationPage>
+            <Custom:BuyPage x:Name="buyPage" Visibility="Hidden" Grid.RowSpan="2"></Custom:BuyPage>
+            <Custom:PersonalAreaPage x:Name="personalAreaPage" Visibility="Hidden" Grid.RowSpan="2"></Custom:PersonalAreaPage>
+            
+            <Border CornerRadius="12" Width="290" HorizontalAlignment="Right" Margin="0,0,-0.4,0.4" Background="#6162F5">
+
+            </Border>
+            <Image Source="/Images/entry.png" Margin="426,0,-426.4,0.8" ></Image>
+            <Image Source="/Images/home.png" Margin="20,0,-446.4,0.8" ></Image>
+
+            <Label x:Name="goToMainPage" Content="Главная страница" HorizontalAlignment="Left" Margin="750,0,0,0" Cursor="Hand" FontSize="12"  Foreground="White" VerticalAlignment="Top" Height="30" MouseDown="goToMainPageMouseDown"/>
+            <Label x:Name="mainLogInLabel"  Content="Войти" Margin="0,0,15,0" Cursor="Hand"  Foreground="White" Height="30" VerticalAlignment="Top" FontSize="12" MouseLeftButtonDown="mainLogInLabelMouseLeftButtonDown" HorizontalAlignment="Right"/>
+            <Label x:Name="userNameLabel" Content="" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="#6162F5" Height="30" FontSize="12" VerticalAlignment="Top" Width="Auto" MouseDown="userNameLabelMouseDown"/>
+
+        </Grid>
+    </Border>
+</Window>
